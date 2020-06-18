@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in says">{{item}}</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+<script>
+    const app =new Vue({
+        el:'#app',
+        data:{
+            message:"你好",
+            says:['哈哈','Xoxoxo','丫丫','照片那个是']
+        }
+    })
+</script>

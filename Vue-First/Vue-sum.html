@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>sum</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>当前记数： {{counter}}</h2>
+        <button @Click="add">+</button>
+        <button @Click="sub">-</button>
+    </div>
+
+</body>
+</html>
+
+<script>
+    let app = new Vue({
+        el:'#app',
+        data:{
+            counter:0
+        },
+        methods:{
+            add:function () {
+                this.counter++;
+                console.log('add被执行了');
+            },
+            sub:function () {
+                this.counter--;
+                console.log('sub被执行了');
+            }
+        }
+    })
+</script>
